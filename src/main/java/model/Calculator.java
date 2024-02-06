@@ -6,7 +6,11 @@ public class Calculator {
 
     public Calculator() {
     }
-    public double calculateDiscount(){
-
+    public double calculateDiscount(double sum, double discont ){
+        double result = sum - discont;
+        if(result< 0) {
+            throw new ArithmeticException("Скидка не может быть больше суммы");
+        }
+        return result;
     }
 }
